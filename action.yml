@@ -1,0 +1,54 @@
+name: Get file checksums
+description: Get SHA checksums of a file
+
+inputs:
+  file-path:
+    description: Path to a file in the repository
+    required: true
+
+outputs:
+  sha1:
+    description: SHA1 checksum
+    value: ${{ steps.compute-sha1.outputs.sha1 }}
+  sha224:
+    description: SHA224 checksum
+    value: ${{ steps.compute-sha224.outputs.sha224 }}
+  sha256:
+    description: SHA256 checksum
+    value: ${{ steps.compute-sha256.outputs.sha256 }}
+  sha384:
+    description: SHA384 checksum
+    value: ${{ steps.compute-sha384.outputs.sha384 }}
+  sha512:
+    description: SHA512 checksum
+    value: ${{ steps.compute-sha512.outputs.sha512 }}
+  
+runs:
+  using: composite
+  steps:
+    - uses: actions/checkout@v3
+    - id: compute-sha1
+      shell: bash
+      run: |
+        SHA1=$(sha1sum ${{ inputs.file-path }} | cut -d' ' -f1)
+        echo "::set-output name=sha1::$(echo $SHA1)"
+    - id: compute-sha224
+      shell: bash
+      run: |
+        SHA224=$(sha224sum ${{ inputs.file-path }} | cut -d' ' -f1)
+        echo "::set-output name=sha224::$(echo $SHA224)"
+    - id: compute-sha256
+      shell: bash
+      run: |
+        SHA256=$(sha256sum ${{ inputs.file-path }} | cut -d' ' -f1)
+        echo "::set-output name=sha256::$(echo $SHA256)"
+    - id: compute-sha384
+      shell: bash
+      run: |
+        SHA384=$(sha384sum ${{ inputs.file-path }} | cut -d' ' -f1)
+        echo "::set-output name=sha384::$(echo $SHA384)"
+    - id: compute-sha512
+      shell: bash
+      run: |
+        SHA512=$(sha512sum ${{ inputs.file-path }} | cut -d' ' -f1)
+        echo "::set-output name=sha512::$(echo $SHA512)"
