@@ -19,3 +19,7 @@ steps:
       echo ${{ steps.file-checksums.outputs.sha284 }}
       echo ${{ steps.file-checksums.outputs.sha512 }}
 ```
+
+---
+
+[![Check Markdown](https://github.com/pavelsaman/file-checksums/actions/workflows/check-markdown.yml/badge.svg)](https://github.com/pavelsaman/file-checksums/actions/workflows/check-markdown.yml)
