@@ -4,7 +4,7 @@ Get SHA file checksums
 
 ## Example usage
 
-```
+```yaml
 steps:
   - name: Get checksums
     id: file-checksums
