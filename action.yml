@@ -2,6 +2,10 @@ name: Get file checksums
 description: Get SHA checksums of a file
 author: 'Pavel Saman'
 
+branding:
+  icon: align-justify
+  color: blue
+
 inputs:
   file-path:
     description: Path to a file in the repository
