@@ -1,5 +1,6 @@
 name: Get file checksums
 description: Get SHA checksums of a file
+author: 'Pavel Saman'
 
 inputs:
   file-path:
