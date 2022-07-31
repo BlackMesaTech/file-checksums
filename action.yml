@@ -27,7 +27,7 @@ outputs:
   sha512:
     description: SHA512 checksum
     value: ${{ steps.compute-sha512.outputs.sha512 }}
-  
+
 runs:
   using: composite
   steps:
