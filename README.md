@@ -22,4 +22,4 @@ steps:
 
 ---
 
-[![Check Markdown](https://github.com/pavelsaman/file-checksums/actions/workflows/check-markdown.yml/badge.svg)](https://github.com/pavelsaman/file-checksums/actions/workflows/check-markdown.yml)
+[![Lint](https://github.com/pavelsaman/file-checksums/actions/workflows/lint.yml/badge.svg)](https://github.com/pavelsaman/file-checksums/actions/workflows/lint.yml)
