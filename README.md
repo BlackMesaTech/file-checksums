@@ -8,7 +8,7 @@ Get SHA file checksums
 steps:
   - name: Get checksums
     id: file-checksums
-    uses: pavelsaman/file-checksums@v1.0.0
+    uses: pavelsaman/file-checksums@v1
     with:
       file-path: README.md
   - name: Display file checksums
