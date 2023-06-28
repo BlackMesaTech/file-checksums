@@ -31,7 +31,7 @@ outputs:
 runs:
   using: composite
   steps:
-    - uses: actions/checkout@v3
+    # - uses: actions/checkout@v3
     - id: compute-sha1
       shell: bash
       run: |
